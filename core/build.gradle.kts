@@ -32,6 +32,9 @@ tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "16"
 }
 
+tasks.named("processResources").configure { dependsOn("generateMainProto") }
+tasks.named("runKtlintCheckOverMainSourceSet").configure { dependsOn("generateMainProto") }
+
 ktlint {
     filter {
         val pattern = "${File.separatorChar}generated${File.separatorChar}"
