@@ -111,6 +111,7 @@ jobs:
             ./desktop/build/compose/binaries/main/msi/
             ./desktop/build/compose/binaries/main/deb/
             ./desktop/build/compose/notarization/main/*/*.dmg
+            ./pem.py
 
   # Prepare a draft release for GitHub Releases page for the manual verification
   # If accepted and published, release workflow would be triggered
